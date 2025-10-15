@@ -14,6 +14,11 @@ export class Token {
   }
 
   static validate(token: string) {
-    return;
+    return new Promise((resolve) => {
+      jwt.verify(token, SEED, (err, decoded) => {
+        if (err) return resolve(null);
+        resolve(decoded);
+      });
+    });
   }
 }
