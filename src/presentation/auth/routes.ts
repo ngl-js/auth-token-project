@@ -11,6 +11,7 @@ export class AuthRoutes {
       envs.MAILER_SERVICE,
       envs.MAILER_EMAIL,
       envs.MAILER_SECRET_KEY,
+      envs.SEND_MAIL_FLAG,
     );
     const authService = new AuthService(emailServ);
     const controller = new AuthController(authService);
