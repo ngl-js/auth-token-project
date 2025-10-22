@@ -3,3 +3,4 @@ export * from "./dtos/auth/signup-user.dto";
 export * from "./dtos/auth/signin-user.dto";
 export * from "./entities/user.entity";
 export * from "./dtos/category/create-category.dto";
+export * from "./dtos/shared/pagination.dto";
