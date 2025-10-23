@@ -21,6 +21,7 @@ export class AuthMiddleware {
         return res.status(400).json({ message: "Invalid token -user" });
 
       req.body.user = UserEntity.fromObj(user);
+
       next();
     } catch (error) {
       console.log(error);

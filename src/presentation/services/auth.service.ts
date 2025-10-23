@@ -24,7 +24,6 @@ export class AuthService {
       await this.emailValilation(user.email);
 
       const { password, ..._user } = UserEntity.fromObj(user);
-      let test = true;
 
       // JWT
       const _token = await Token.generate({ id: user.id });
